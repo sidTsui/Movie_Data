@@ -1,22 +1,22 @@
 /*Requirement: Two-table join
-Description: Find all movies released in the USA in 1999 and their directors' names.
+Description: Find all movies released in the USA in 2002 and their directors' names.
 Implementaion: joins MOVIES with MAIN_DIRECTOR based on DirectorID*/
 
 SELECT m.Title, d.FN, d.LN
 FROM MOVIES AS m
 JOIN MAIN_DIRECTOR AS d ON m.DirectorID = d.DirectorID
-WHERE m.ReleaseYear = 1999 
+WHERE m.ReleaseYear = 2002 
 AND m.CountryCreated = 'USA';
 
 /*Requirement: Three-table join: 
-Description: Find all movies released in the USA in 1999 and their directors' names and their platform
+Description: Find all movies released in the USA in 2002 and their directors' names and their platform
 Implemenation: left join to joing PLATFORM using IS_ON*/
 SELECT m.Title, d.FN, d.LN, p.PlatformName
 FROM MOVIES AS m
 JOIN MAIN_DIRECTOR AS d ON m.DirectorID = d.DirectorID
 LEFT JOIN IS_ON AS io ON m.MovieID = io.MovieID
 LEFT JOIN PLATFORM AS p ON io.PlatformID = p.PlatformID
-WHERE m.ReleaseYear = 1999 
+WHERE m.ReleaseYear = 2002 
 AND m.CountryCreated = 'USA';
 
 /*Requirement: Self-join: 
@@ -45,18 +45,18 @@ GROUP BY d.DirectorID
 HAVING TotalMoviesDirected > 5;
 
 /*Requirement: Text-based search query using LIKE with wildcard: 
-Description: Find all movies with "Matrix" in their title.
+Description: Find all movies starting with "The" in their title.
 Implementation: uses LIKE and % to search specific title*/
 SELECT Title
 FROM MOVIES
-WHERE Title LIKE '%Matrix%';
+WHERE Title LIKE 'The%';
 
 /*Requirement: Subquery:
- Description: Find all movies released in the USA in 1999 whose director has directed another movie
- Implementation: find directors who have directed more than one movie USA, 1999*/
+ Description: Find all movies released in the USA in 2002 whose director has directed another movie
+ Implementation: find directors who have directed more than one movie USA, 2002*/
 SELECT Title
 FROM MOVIES
-WHERE ReleaseYear = 1999 AND CountryCreated = 'USA' AND DirectorID IN (
+WHERE ReleaseYear = 2002 AND CountryCreated = 'USA' AND DirectorID IN (
     SELECT DirectorID
     FROM MOVIES
     GROUP BY DirectorID
@@ -64,7 +64,7 @@ WHERE ReleaseYear = 1999 AND CountryCreated = 'USA' AND DirectorID IN (
 );
 
 /*Requirement: Stored function to calculate the average rating for a movie*/
-CREATE FUNCTION CalculateAverageRating(movie_id INT) RETURNS DECIMAL(3,2)
+CREATE FUNCTION CalcAvgRating(movie_id INT) RETURNS DECIMAL(3,2)
 BEGIN
     DECLARE avg_rating DECIMAL(3,2);
     SELECT AVG(RatingNum) INTO avg_rating FROM RATINGS WHERE MovieID = movie_id;
@@ -76,11 +76,11 @@ CREATE PROCEDURE GetAverageRatingForMovie(movie_title VARCHAR(255))
 BEGIN
     DECLARE movie_id INT;
     SELECT MovieID INTO movie_id FROM MOVIES WHERE Title = movie_title;
-    SELECT CalculateAverageRating(movie_id) AS AverageRating;
+    SELECT CalcAvgRating(movie_id) AS AverageRating;
 END;
 
 -- Trigger to update average rating when a new rating is inserted
-CREATE TRIGGER UpdateAverageRating AFTER INSERT ON RATINGS
+CREATE TRIGGER UpdateAvgRating AFTER INSERT ON RATINGS
 FOR EACH ROW
 BEGIN
     DECLARE avg_rating DECIMAL(3,2);
