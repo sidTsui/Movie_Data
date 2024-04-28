@@ -1,64 +1,66 @@
 /*Requirement: Two-table join
-Description: Find all movies released in the USA in 2002 and their directors' names.
+Description: Find all movies released in the USA in 2001 and their directors' names.
 Implementaion: joins MOVIES with MAIN_DIRECTOR based on DirectorID*/
 
 SELECT m.Title, d.FN, d.LN
-FROM MOVIES AS m
+FROM MOVIE AS m
 JOIN MAIN_DIRECTOR AS d ON m.DirectorID = d.DirectorID
 WHERE m.ReleaseYear = 2002 
 AND m.CountryCreated = 'USA';
 
 /*Requirement: Three-table join: 
-Description: Find all movies released in the USA in 2002 and their directors' names and their platform
+Description: Find all movies released in the USA in 2001 and their directors' names and their platform
 Implemenation: left join to joing PLATFORM using IS_ON*/
 SELECT m.Title, d.FN, d.LN, p.PlatformName
-FROM MOVIES AS m
+FROM MOVIE AS m
 JOIN MAIN_DIRECTOR AS d ON m.DirectorID = d.DirectorID
 LEFT JOIN IS_ON AS io ON m.MovieID = io.MovieID
 LEFT JOIN PLATFORM AS p ON io.PlatformID = p.PlatformID
 WHERE m.ReleaseYear = 2002 
 AND m.CountryCreated = 'USA';
 
+********************
 /*Requirement: Self-join: 
 Description: Find all movies whose director acted in the movie.
 Implementation: joins MOVIES w/ MAIN_DIRECTOR and MAIN_ACTORS based on DirectorId and ActorID*/
 SELECT m.Title, d.FN AS DirectorFirstName, d.LN AS DirectorLastName, ma.FN AS ActorFirstName, ma.LN AS ActorLastName
-FROM MOVIES AS m
+FROM MOVIE AS m
 JOIN MAIN_DIRECTOR AS d ON m.DirectorID = d.DirectorID
 JOIN MAIN_ACTORS AS ma ON m.MovieID = ma.MovieID 
 AND d.ActorID = ma.ActorID;
-
+**********************
+ 
 /*Requirement: Aggregate function: multiple rows grouped into one 
 Description: Find the total number of movies released in the USA.
 Implementation: use COUNT() for num of movies in MOVIES table in the USA*/
 SELECT COUNT(MovieID)
-FROM MOVIES
+FROM MOVIE
 WHERE CountryCreated = 'USA';
 
 /*Requirement: Aggregate function using GROUP BY and HAVING: 
-Description: Find the directors who have directed more than 5 movies.
-Implementation: counts movies directed by each director and returns directors w/ <= 5 movies (uses HAVING)*/
+Description: Find the directors who have directed more than 2 movies.
+Implementation: counts movies directed by each director and returns directors w/ <= 2 movies (uses HAVING)*/
 SELECT d.FN, d.LN, COUNT(m.MovieID) AS TotalMoviesDirected
 FROM MAIN_DIRECTOR d
-LEFT JOIN MOVIES m ON d.DirectorID = m.DirectorID
-GROUP BY d.DirectorID
-HAVING TotalMoviesDirected > 5;
+LEFT JOIN MOVIE m ON m.DirectorID = d.DirectorID
+GROUP BY d.FN, d.LN
+HAVING TotalMoviesDirected > 2;
 
 /*Requirement: Text-based search query using LIKE with wildcard: 
 Description: Find all movies starting with "The" in their title.
 Implementation: uses LIKE and % to search specific title*/
 SELECT Title
-FROM MOVIES
+FROM MOVIE
 WHERE Title LIKE 'The%';
 
 /*Requirement: Subquery:
- Description: Find all movies released in the USA in 2002 whose director has directed another movie
+ Description: Find all movies released in the USA in 1999 whose director has directed another movie
  Implementation: find directors who have directed more than one movie USA, 2002*/
 SELECT Title
-FROM MOVIES
-WHERE ReleaseYear = 2002 AND CountryCreated = 'USA' AND DirectorID IN (
+FROM MOVIE
+WHERE ReleaseYear = 1999 AND CountryCreated = 'USA' AND DirectorID IN (
     SELECT DirectorID
-    FROM MOVIES
+    FROM MOVIE
     GROUP BY DirectorID
     HAVING COUNT(*) > 1
 );
