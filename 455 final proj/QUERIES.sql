@@ -39,13 +39,7 @@ JOIN MAIN_DIRECTOR AS d ON m.DirectorID = d.DirectorID
 JOIN MAIN_ACTORS AS ma ON m.MovieID = ma.MovieID 
 AND d.ActorID = ma.ActorID;
 **********************
- 
 
-Description: Find all movies where director of movie 1 matches the director of movie 2.
-Implementation: joins MOVIES w/ MOVIES based on DirectorId*/
-SELECT m1.Title AS MovieTitle1, m2.Title AS MovieTitle2
-FROM MOVIE AS m1
-JOIN MOVIE AS m2 ON m1.DirectorID = m2.DirectorID;
 
 /*Requirement: Aggregate function: multiple rows grouped into one 
 Description: Find the total number of movies released in the USA.
@@ -83,20 +77,24 @@ WHERE ReleaseYear = 1999 AND CountryCreated = 'USA' AND DirectorID IN (
 );
 
 /*Requirement: Stored function to calculate the average rating for a movie*/
+DELIMITER //
 CREATE FUNCTION CalcAvgRating(movie_id INT) RETURNS DECIMAL(3,2)
 BEGIN
     DECLARE avg_rating DECIMAL(3,2);
     SELECT AVG(RatingNum) INTO avg_rating FROM RATINGS WHERE MovieID = movie_id;
     RETURN avg_rating;
-END;
+END //
+DELIMITER;
 
 -- Stored procedure to get the average rating for a movie
+DELIMITER //
 CREATE PROCEDURE GetAverageRatingForMovie(movie_title VARCHAR(255))
 BEGIN
     DECLARE movie_id INT;
-    SELECT MovieID INTO movie_id FROM MOVIES WHERE Title = movie_title;
+    SELECT MovieID INTO movie_id FROM MOVIE WHERE Title = movie_title;
     SELECT CalcAvgRating(movie_id) AS AverageRating;
-END;
+END//
+DELIMITER;
 
 -- Trigger to update average rating when a new rating is inserted
 CREATE TRIGGER UpdateAvgRating AFTER INSERT ON RATINGS
