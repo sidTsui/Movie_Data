@@ -1,4 +1,4 @@
--- Inserting genres
+
 INSERT INTO `GENRES` (`Genre`, `MovieID`) VALUES 
 ('Sci-Fi', 1), -- The Matrix
 ('Sci-Fi', 2), -- Interstellar
@@ -91,7 +91,6 @@ INSERT INTO `MAIN_ACTORS` (`ActorID`, `FN`,`LN`, `DOB`, `CountryOrigin`) VALUES
 (43, 'Anthony', 'Perkins', '1932-04-04', 'USA'), (44, 'Gene', 'Kelly', '1912-08-23', 'USA'), (45, 'Keanu', 'Reeves', '1964-09-02', 'USA'),
 (46, 'Michael', 'J. Fox', '1961-06-09', 'Canada'), (47, 'Jim', 'Carrey', '1962-01-17', 'Canada'), (48, 'Harrison', 'Ford', '1942-07-13', 'USA'),
 (49, 'Matt', 'Damon', '1970-10-08', 'USA'), (50, 'Bill', 'Murray', '1950-09-21', 'USA');
-
 -- Inserting ratings
 INSERT INTO `RATINGS` (`RatingNum`, `ReviewText`,`MovieID`, `ActorID`)  VALUES
 (5, 'Great movie!', 1, 1), (4, 'Amazing visuals!', 2, 2), (4, 'Classic rom-com!', 3, 3), 
@@ -109,7 +108,6 @@ INSERT INTO `RATINGS` (`RatingNum`, `ReviewText`,`MovieID`, `ActorID`)  VALUES
 (4, 'Enchanting!', 40, 40), (5, 'Dark and gritty!', 41, 41), (5, 'Inspiring!', 42, 42), (4, 'Creepy!', 43, 43),
 (5, 'Classic musical!', 44, 44), (5, 'Action-packed sequel!', 45, 45), (5, 'Time-traveling adventure!', 46, 46),
 (5, 'Romantic comedy!', 47, 47), (5, 'Iconic adventure!', 48, 48), (4, 'Thrilling sci-fi!', 49, 49), (5, 'Hilarious comedy!', 50, 50);
-
 -- Inserting main directors
 INSERT INTO `MAIN_DIRECTOR` (`DirectorID`, `FN`,`MN`, `LN`)  VALUES
 (1, 'Lana', NULL, 'Wachowski'), (2, 'Christopher', NULL, 'Nolan'), (3, 'Rob', NULL, 'Reiner'),
@@ -129,11 +127,9 @@ INSERT INTO `MAIN_DIRECTOR` (`DirectorID`, `FN`,`MN`, `LN`)  VALUES
 (43, 'Alfred', NULL, 'Hitchcock'), (44, 'Stanley', NULL, 'Donen'), (45, 'Robert', NULL, 'Zemeckis'),
 (46, 'Robert', 'Zemeckis', NULL), (47, 'Michel', NULL, 'Gondry'), (48, 'Steven', NULL, 'Spielberg'),
 (49, 'Ridley', NULL, 'Scott'), (50, 'Harold', NULL, 'Ramis');
-
 -- Inserting platforms
 INSERT INTO `PLATFORM` (`PlatformID`, `PlatformName`,`Price`, `DateAdded`)  VALUES
 (1, 'Netflix', 9.99, '2023-01-01'), (2, 'Amazon Prime Video', 8.99, '2022-12-15'), (3, 'Hulu', 7.99, '2023-02-20');
-
 -- Inserting is_on
 INSERT INTO `IS_ON` (`MovieID`, `PlatformID`)  VALUES
 (1, 1), (1, 2), (1, 3), (2, 1), (2, 2), (2, 3), (3, 1), (3, 2), (3, 3), (4, 1),
@@ -153,7 +149,6 @@ INSERT INTO `IS_ON` (`MovieID`, `PlatformID`)  VALUES
 (44, 1), (44, 2), (44, 3), (45, 1), (45, 2), (45, 3), (46, 1), (46, 2), (46, 3),
 (47, 1), (47, 2), (47, 3), (48, 1), (48, 2), (48, 3), (49, 1), (49, 2), (49, 3),
 (50, 1), (50, 2), (50, 3);
-
 -- Inserting has
 INSERT INTO `HAS` (`ActorID`, `PlatformID`)  VALUES
 (1, 1), (1, 2), (1, 3), (2, 1), (2, 2), (2, 3), (3, 1), (3, 2), (3, 3), (4, 1),
