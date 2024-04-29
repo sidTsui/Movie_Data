@@ -6,9 +6,9 @@ CREATE TABLE `GENRES` (
 );
 
 /*done*/
-CREATE TABLE `MOVIES` (
+CREATE TABLE `MOVIE` (
   `MovieID` int PRIMARY KEY ,
-  `Title` varchar(20) NOT NULL,
+  `Title` varchar(250) NOT NULL,
   `ReleaseYear` varchar(4) NOT NULL,
   `CountryCreated` varchar(40) NOT NULL,
   `DirectorID` int NOT NULL,
@@ -18,18 +18,18 @@ CREATE TABLE `MOVIES` (
 CREATE TABLE `MAIN_ACTORS` (
   `ActorID` int PRIMARY KEY,
   `FN` varchar(20) NOT NULL,
-  `MN` varchar(20) NOT NULL,
-  `LN` varchar(20) NOT NULL,
+  `LN` varchar(20) DEFAULT NULL,
   `DOB` date NOT NULL,
   `CountryOrigin` varchar(40) NOT NULL
 );
 
 /*done*/
 CREATE TABLE `RATINGS` (
-  `RatingNum` int PRIMARY KEY,
+  `RatingNum` int NOT NULL,
   `ReviewText` varchar(200) DEFAULT NULL, /*done*/
-  `MovieID` int DEFAULT NULL,
+  `MovieID` int NOT NULL,
   `ActorID` int DEFAULT NULL,
+PRIMARY KEY (`RatingNum`,`MovieID`),
   FOREIGN KEY (`MovieID`) REFERENCES `MOVIE` (`MovieID`),
   FOREIGN KEY (`ActorID`) REFERENCES `MAIN_ACTORS` (`ActorID`)
 );
@@ -54,7 +54,7 @@ CREATE TABLE `STARS` (
   `ActorID` int NOT NULL,
 	PRIMARY KEY (MovieID, ActorID),
 	FOREIGN KEY (MovieID) REFERENCES MOVIE(MovieID),
-	FOREIGN KEY (PlatformID) REFERENCES MAIN_ACTORS(ActorID)
+	FOREIGN KEY (ActorID) REFERENCES MAIN_ACTORS(ActorID)
 );
 
 /*done*/
@@ -62,7 +62,7 @@ CREATE TABLE `IS_ON` (
   `MovieID` int NOT NULL,
   `PlatformID` int NOT NULL,
 	PRIMARY KEY (MovieID, PlatformID),
-	FOREIGN KEY (MovieID) REFERENCES MOVIE(BookNum),
+	FOREIGN KEY (MovieID) REFERENCES MOVIE(MovieID),
 	FOREIGN KEY (PlatformID) REFERENCES PLATFORM(PlatformID)
 );
 

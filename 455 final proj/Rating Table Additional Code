@@ -1,0 +1,193 @@
+INSERT INTO `RATINGS` (`RatingID`, `RatingNum`, `ReviewText`, `MovieID`, `ActorID`) VALUES 
+
+  
+
+(51, 5, 'Awesome movie!', 1, 1), 
+
+(52, 4, 'Exciting storyline!', 1, 2), 
+
+(53, 3, 'Mind-blowing!', 1, 3), 
+
+  
+
+(54, 5, 'Great acting!', 2, 4), 
+
+(55, 3, 'Fantastic visuals!', 2, 5), 
+
+(56, 4, 'Emotional journey!', 2, 6), 
+
+  
+
+(57, 5, 'Heartwarming romance!', 3, 7), 
+
+(58, 2, 'Feel-good movie!', 3, 8), 
+
+(59, 4, 'Captivating plot!', 3, 9), 
+
+  
+
+(60, 4, 'Scary atmosphere!', 4, 10), 
+
+(61, 5, 'Iconic performance!', 4, 11), 
+
+(62, 3, 'Nail-biting suspense!', 4, 12), 
+
+  
+
+(63, 5, 'Beautiful animation!', 5, 13), 
+
+(64, 4, 'Fantasy adventure!', 5, 14), 
+
+(65, 3, 'Magical experience!', 5, 15), 
+
+  
+
+(66, 4, 'Thrilling plot!', 6, 16), 
+
+(67, 5, 'Edge-of-your-seat!', 6, 17), 
+
+(68, 2, 'Thought-provoking!', 6, 18), 
+
+  
+
+(69, 3, 'Action-packed!', 7, 19), 
+
+(70, 5, 'Twisty plot!', 7, 20), 
+
+(71, 4, 'Intense drama!', 7, 21), 
+
+  
+
+(72, 5, 'Emotional rollercoaster!', 8, 22), 
+
+(73, 3, 'Powerful performances!', 8, 23), 
+
+(74, 4, 'Tense thriller!', 8, 24), 
+
+  
+
+(75, 4, 'Charming!', 9, 25), 
+
+(76, 5, 'Whimsical!', 9, 26), 
+
+(77, 3, 'Magical journey!', 9, 27), 
+
+  
+
+(78, 5, 'Suspenseful!', 10, 28), 
+
+(79, 4, 'Riveting!', 10, 29), 
+
+(80, 3, 'Epic adventure!', 10, 30), 
+
+  
+
+(81, 4, 'Iconic moments!', 11, 31), 
+
+(82, 5, 'Gripping!', 11, 32), 
+
+(83, 3, 'Emotional depth!', 11, 33), 
+
+  
+
+(84, 5, 'Charming!', 12, 34), 
+
+(85, 4, 'Enthralling!', 12, 35), 
+
+(86, 3, 'Heartfelt!', 12, 36), 
+
+  
+
+(87, 4, 'Stunning visuals!', 13, 37), 
+
+(88, 5, 'Magical!', 13, 38), 
+
+(89, 3, 'Inspirational!', 13, 39), 
+
+  
+
+(90, 4, 'Quirky humor!', 14, 40), 
+
+(91, 5, 'Laugh-out-loud funny!', 14, 41), 
+
+(92, 3, 'Charming characters!', 14, 42), 
+
+  
+
+(93, 5, 'Action-packed sequel!', 15, 43), 
+
+(94, 4, 'Entertaining!', 15, 44), 
+
+(95, 3, 'Thrilling!', 15, 45), 
+
+  
+
+(96, 4, 'Intense action!', 16, 1), 
+
+(97, 5, 'Great special effects!', 16, 2), 
+
+(98, 3, 'Suspenseful plot!', 16, 3), 
+
+  
+
+(99, 5, 'Epic journey!', 17, 4), 
+
+(100, 4, 'Cinematic masterpiece!', 17, 5), 
+
+(101, 3, 'Incredible visuals!', 17, 6), 
+
+  
+
+(102, 4, 'Emotionally gripping!', 18, 7), 
+
+(103, 5, 'Heartfelt performances!', 18, 8), 
+
+(104, 3, 'Charming romance!', 18, 9), 
+
+  
+
+(105, 5, 'Exciting adventure!', 19, 10), 
+
+(106, 3, 'Swashbuckling fun!', 19, 11), 
+
+(107, 4, 'Pirate extravaganza!', 19, 12), 
+
+  
+
+(108, 3, 'Toy-tastic!', 20, 13), 
+
+(109, 5, 'Charming animation!', 20, 14), 
+
+(110, 4, 'Heartwarming story!', 20, 15), 
+
+  
+
+(111, 5, 'Suspenseful thriller!', 21, 16), 
+
+(112, 3, 'Mind-bending!', 21, 17), 
+
+(113, 4, 'Gripping suspense!', 21, 18), 
+
+  
+
+(114, 3, 'Twisted plot!', 22, 19), 
+
+(115, 4, 'Unpredictable!', 22, 20), 
+
+(116, 5, 'Edge-of-your-seat!', 22, 21), 
+
+  
+
+(117, 4, 'Action-packed!', 23, 22), 
+
+(118, 3, 'Emotionally intense!', 23, 23), 
+
+(119, 5, 'Mind-bending!', 23, 24), 
+
+  
+
+(120, 3, 'Classic!', 24, 25), 
+
+(121, 4, 'Iconic animation!', 24, 26), 
+
+(122, 5, 'Emotional journey!', 24, 27); 
