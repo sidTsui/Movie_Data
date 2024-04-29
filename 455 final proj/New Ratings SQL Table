@@ -1,0 +1,19 @@
+ 
+
+CREATE TABLE `RATINGS` ( 
+
+  `RatingID` INT AUTO_INCREMENT PRIMARY KEY, 
+
+  `RatingNum` INT NOT NULL, 
+
+  `ReviewText` VARCHAR(200) DEFAULT NULL, 
+
+  `MovieID` INT NOT NULL, 
+
+  `ActorID` INT DEFAULT NULL, 
+
+  FOREIGN KEY (`MovieID`) REFERENCES `MOVIE` (`MovieID`), 
+
+  FOREIGN KEY (`ActorID`) REFERENCES `MAIN_ACTORS` (`ActorID`) 
+
+); 

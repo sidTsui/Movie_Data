@@ -1,25 +1,58 @@
--- Inserting genres
-INSERT INTO `GENRES` (`Genre`,`MovieID`) VALUES 
-('Action', 1), ('Thriller', 1), ('Sci-Fi', 2), ('Adventure', 2), ('Comedy', 3), ('Romance', 3),
-('Drama', 4), ('Horror', 4), ('Fantasy', 5), ('Animation', 5), ('Family', 6), ('Musical', 6),
-('Mystery', 7), ('Crime', 7), ('Biography', 8), ('History', 8), ('War', 9), ('Documentary', 9),
-('Western', 10), ('Sport', 10), ('Music', 11), ('Sci-Fi', 11), ('Thriller', 12), ('Mystery', 12),
-('Romance', 13), ('Drama', 13), ('Adventure', 14), ('Family', 14), ('Comedy', 15), ('Fantasy', 15),
-('Action', 16), ('Thriller', 16), ('Sci-Fi', 17), ('Drama', 17), ('Comedy', 18), ('Romance', 18),
-('Action', 19), ('Adventure', 19), ('Fantasy', 20), ('Animation', 20), ('Crime', 21), ('Mystery', 21),
-('Drama', 22), ('Biography', 22), ('Horror', 23), ('Thriller', 23), ('Comedy', 24), ('Musical', 24),
-('Sci-Fi', 25), ('Action', 25), ('Adventure', 26), ('Comedy', 26), ('Drama', 27), ('Romance', 27),
-('Action', 28), ('Adventure', 28), ('Sci-Fi', 29), ('Drama', 29), ('Comedy', 30), ('Romance', 30),
-('Action', 31), ('Thriller', 31), ('Sci-Fi', 32), ('Mystery', 32), ('Romance', 33), ('Drama', 33),
-('Adventure', 34), ('Family', 34), ('Comedy', 35), ('Fantasy', 35), ('Action', 36), ('Thriller', 36),
-('Sci-Fi', 37), ('Drama', 37), ('Comedy', 38), ('Romance', 38), ('Action', 39), ('Adventure', 39),
-('Fantasy', 40), ('Animation', 40), ('Crime', 41), ('Mystery', 41), ('Drama', 42), ('Biography', 42),
-('Horror', 43), ('Thriller', 43), ('Comedy', 44), ('Musical', 44), ('Sci-Fi', 45), ('Action', 45),
-('Adventure', 46), ('Comedy', 46), ('Drama', 47), ('Romance', 47), ('Action', 48), ('Adventure', 48),
-('Sci-Fi', 49), ('Drama', 49), ('Comedy', 50), ('Romance', 50);
+
+INSERT INTO `GENRES` (`Genre`, `MovieID`) VALUES 
+('Sci-Fi', 1), -- The Matrix
+('Sci-Fi', 2), -- Interstellar
+('Romance', 3), -- When Harry Met Sally
+('Horror', 4), -- The Shining
+('Fantasy', 5), -- Spirited Away
+('Musical', 6), -- The Sound of Music
+('Mystery', 7), -- The Prestige
+('War', 8), -- Schindler's List
+('War', 9), -- Saving Private Ryan
+('Western', 10), -- The Good, the Bad and the Ugly
+('Sci-Fi', 11), -- Blade Runner 2049
+('Mystery', 12), -- Gone Girl
+('Romance', 13), -- The Notebook
+('Animation', 14), -- Finding Nemo
+('Adventure', 15), -- The Princess Bride
+('Sci-Fi', 16), -- Inception
+('Sci-Fi', 17), -- The Martian
+('Romance', 18), -- La La Land
+('Action', 19), -- Pirates of the Caribbean: The Curse of the Black Pearl
+('Animation', 20), -- Toy Story
+('Thriller', 21), -- The Silence of the Lambs
+('Biography', 22), -- The Social Network
+('Horror', 23), -- Get Out
+('Animation', 24), -- The Lion King
+('Action', 25), -- The Avengers
+('Adventure', 26), -- Jurassic Park
+('Drama', 27), -- Forrest Gump
+('Action', 28), -- Mad Max: Fury Road
+('Drama', 29), -- The Shawshank Redemption
+('Comedy', 30), -- Groundhog Day
+('Action', 31), -- Die Hard
+('Mystery', 32), -- The Sixth Sense
+('Romance', 33), -- Titanic
+('Animation', 34), -- Up
+('Fantasy', 35), -- Harry Potter and the Philosopher's Stone
+('Action', 36), -- The Dark Knight
+('Sci-Fi', 37), -- Gravity
+('Romance', 38), -- Silver Linings Playbook
+('Adventure', 39), -- Indiana Jones and the Raiders of the Lost Ark
+('Animation', 40), -- Beauty and the Beast
+('Thriller', 41), -- Se7en
+('Biography', 42), -- A Beautiful Mind
+('Horror', 43), -- Psycho
+('Musical', 44), -- Singin' in the Rain
+('Sci-Fi', 45), -- The Matrix Reloaded
+('Adventure', 46), -- Back to the Future
+('Romance', 47), -- Eternal Sunshine of the Spotless Mind
+('Adventure', 48), -- Raiders of the Lost Ark
+('Sci-Fi', 49), -- The Martian
+('Comedy', 50); -- Groundhog Day
 
 -- Inserting movies
-INSERT INTO `MOVIES` (`MovieId`, `Title`,`ReleaseYear`, `CountryCreated`, `DirectorID`) VALUES
+INSERT INTO `MOVIE` (`MovieId`, `Title`,`ReleaseYear`, `CountryCreated`, `DirectorID`) VALUES
 (1, 'The Matrix', 1999, 'USA', 1), (2, 'Interstellar', 2014, 'USA', 2), (3, 'When Harry Met Sally', 1989, 'USA', 3),
 (4, 'The Shining', 1980, 'USA', 4), (5, 'Spirited Away', 2001, 'Japan', 5), (6, 'The Sound of Music', 1965, 'USA', 6),
 (7, 'The Prestige', 2006, 'USA', 7), (8, 'Schindler''s List', 1993, 'USA', 8), (9, 'Saving Private Ryan', 1998, 'USA', 9),
@@ -58,7 +91,6 @@ INSERT INTO `MAIN_ACTORS` (`ActorID`, `FN`,`LN`, `DOB`, `CountryOrigin`) VALUES
 (43, 'Anthony', 'Perkins', '1932-04-04', 'USA'), (44, 'Gene', 'Kelly', '1912-08-23', 'USA'), (45, 'Keanu', 'Reeves', '1964-09-02', 'USA'),
 (46, 'Michael', 'J. Fox', '1961-06-09', 'Canada'), (47, 'Jim', 'Carrey', '1962-01-17', 'Canada'), (48, 'Harrison', 'Ford', '1942-07-13', 'USA'),
 (49, 'Matt', 'Damon', '1970-10-08', 'USA'), (50, 'Bill', 'Murray', '1950-09-21', 'USA');
-
 -- Inserting ratings
 INSERT INTO `RATINGS` (`RatingNum`, `ReviewText`,`MovieID`, `ActorID`)  VALUES
 (5, 'Great movie!', 1, 1), (4, 'Amazing visuals!', 2, 2), (4, 'Classic rom-com!', 3, 3), 
@@ -76,7 +108,6 @@ INSERT INTO `RATINGS` (`RatingNum`, `ReviewText`,`MovieID`, `ActorID`)  VALUES
 (4, 'Enchanting!', 40, 40), (5, 'Dark and gritty!', 41, 41), (5, 'Inspiring!', 42, 42), (4, 'Creepy!', 43, 43),
 (5, 'Classic musical!', 44, 44), (5, 'Action-packed sequel!', 45, 45), (5, 'Time-traveling adventure!', 46, 46),
 (5, 'Romantic comedy!', 47, 47), (5, 'Iconic adventure!', 48, 48), (4, 'Thrilling sci-fi!', 49, 49), (5, 'Hilarious comedy!', 50, 50);
-
 -- Inserting main directors
 INSERT INTO `MAIN_DIRECTOR` (`DirectorID`, `FN`,`MN`, `LN`)  VALUES
 (1, 'Lana', NULL, 'Wachowski'), (2, 'Christopher', NULL, 'Nolan'), (3, 'Rob', NULL, 'Reiner'),
@@ -96,11 +127,9 @@ INSERT INTO `MAIN_DIRECTOR` (`DirectorID`, `FN`,`MN`, `LN`)  VALUES
 (43, 'Alfred', NULL, 'Hitchcock'), (44, 'Stanley', NULL, 'Donen'), (45, 'Robert', NULL, 'Zemeckis'),
 (46, 'Robert', 'Zemeckis', NULL), (47, 'Michel', NULL, 'Gondry'), (48, 'Steven', NULL, 'Spielberg'),
 (49, 'Ridley', NULL, 'Scott'), (50, 'Harold', NULL, 'Ramis');
-
 -- Inserting platforms
 INSERT INTO `PLATFORM` (`PlatformID`, `PlatformName`,`Price`, `DateAdded`)  VALUES
 (1, 'Netflix', 9.99, '2023-01-01'), (2, 'Amazon Prime Video', 8.99, '2022-12-15'), (3, 'Hulu', 7.99, '2023-02-20');
-
 -- Inserting is_on
 INSERT INTO `IS_ON` (`MovieID`, `PlatformID`)  VALUES
 (1, 1), (1, 2), (1, 3), (2, 1), (2, 2), (2, 3), (3, 1), (3, 2), (3, 3), (4, 1),
@@ -120,7 +149,6 @@ INSERT INTO `IS_ON` (`MovieID`, `PlatformID`)  VALUES
 (44, 1), (44, 2), (44, 3), (45, 1), (45, 2), (45, 3), (46, 1), (46, 2), (46, 3),
 (47, 1), (47, 2), (47, 3), (48, 1), (48, 2), (48, 3), (49, 1), (49, 2), (49, 3),
 (50, 1), (50, 2), (50, 3);
-
 -- Inserting has
 INSERT INTO `HAS` (`ActorID`, `PlatformID`)  VALUES
 (1, 1), (1, 2), (1, 3), (2, 1), (2, 2), (2, 3), (3, 1), (3, 2), (3, 3), (4, 1),
