@@ -5,7 +5,7 @@ Implementaion: joins MOVIES with MAIN_DIRECTOR based on DirectorID*/
 SELECT m.Title, d.FN, d.LN
 FROM MOVIE AS m
 JOIN MAIN_DIRECTOR AS d ON m.DirectorID = d.DirectorID
-WHERE m.ReleaseYear = 2002 
+WHERE m.ReleaseYear = 2001
 AND m.CountryCreated = 'USA';
 
 /*Requirement: Three-table join: 
@@ -16,7 +16,7 @@ FROM MOVIE AS m
 JOIN MAIN_DIRECTOR AS d ON m.DirectorID = d.DirectorID
 LEFT JOIN IS_ON AS io ON m.MovieID = io.MovieID
 LEFT JOIN PLATFORM AS p ON io.PlatformID = p.PlatformID
-WHERE m.ReleaseYear = 2002 
+WHERE m.ReleaseYear = 2001
 AND m.CountryCreated = 'USA';
 
 ********************
