@@ -20,13 +20,11 @@ WHERE m.ReleaseYear = 2002
 AND m.CountryCreated = 'USA';
 
 /*Requirement: Self-join: 
-Description: Find all movies whose director acted in the movie.
-Implementation: joins MOVIES w/ MAIN_DIRECTOR and MAIN_ACTORS based on DirectorId and ActorID*/
-SELECT m.Title, d.FN AS DirectorFirstName, d.LN AS DirectorLastName, ma.FN AS ActorFirstName, ma.LN AS ActorLastName
-FROM MOVIES AS m
-JOIN MAIN_DIRECTOR AS d ON m.DirectorID = d.DirectorID
-JOIN MAIN_ACTORS AS ma ON m.MovieID = ma.MovieID 
-AND d.ActorID = ma.ActorID;
+Description: Find all movies where director of movie 1 matches the director of movie 2.
+Implementation: joins MOVIES w/ MOVIES based on DirectorId*/
+SELECT m1.Title AS MovieTitle1, m2.Title AS MovieTitle2
+FROM MOVIE AS m1
+JOIN MOVIE AS m2 ON m1.DirectorID = m2.DirectorID;
 
 /*Requirement: Aggregate function: multiple rows grouped into one 
 Description: Find the total number of movies released in the USA.

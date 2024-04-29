@@ -1,0 +1,35 @@
+<?php
+	try {
+		require('../pdo_connect.php'); //Connect to the database
+		$sql = "SELECT m1.Title AS MovieTitle1, m2.Title AS MovieTitle2 FROM MOVIE AS m1 JOIN MOVIE AS m2 ON m1.DirectorID = m2.DirectorID";
+		$result = $dbc->query($sql);	
+	} catch (PDOException $e){
+			echo $e->getMessage();
+	}
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Movies with same director</title>
+	<meta charset ="utf-8"> 
+</head>
+<body>
+	<h2>Movies that have the same director.</h2>
+
+    <table>
+        <tr>
+            <th>Movie 1</th>
+            <th>Movie 2</th>
+            <th>Director</th>
+        </tr>
+        <?php foreach ($result as $row) { ?>
+            <tr>
+                <td><?php echo $row['MovieTitle1']; ?></td>
+                <td><?php echo $row['MovieTitle2']; ?></td>
+                <td><?php echo $row['DirectorName']; ?></td>
+            </tr>
+        <?php } ?>
+    </table>
+</body>    
+</html>
+
