@@ -1,25 +1,58 @@
 -- Inserting genres
-INSERT INTO `GENRES` (`Genre`,`MovieID`) VALUES 
-('Action', 1), ('Thriller', 1), ('Sci-Fi', 2), ('Adventure', 2), ('Comedy', 3), ('Romance', 3),
-('Drama', 4), ('Horror', 4), ('Fantasy', 5), ('Animation', 5), ('Family', 6), ('Musical', 6),
-('Mystery', 7), ('Crime', 7), ('Biography', 8), ('History', 8), ('War', 9), ('Documentary', 9),
-('Western', 10), ('Sport', 10), ('Music', 11), ('Sci-Fi', 11), ('Thriller', 12), ('Mystery', 12),
-('Romance', 13), ('Drama', 13), ('Adventure', 14), ('Family', 14), ('Comedy', 15), ('Fantasy', 15),
-('Action', 16), ('Thriller', 16), ('Sci-Fi', 17), ('Drama', 17), ('Comedy', 18), ('Romance', 18),
-('Action', 19), ('Adventure', 19), ('Fantasy', 20), ('Animation', 20), ('Crime', 21), ('Mystery', 21),
-('Drama', 22), ('Biography', 22), ('Horror', 23), ('Thriller', 23), ('Comedy', 24), ('Musical', 24),
-('Sci-Fi', 25), ('Action', 25), ('Adventure', 26), ('Comedy', 26), ('Drama', 27), ('Romance', 27),
-('Action', 28), ('Adventure', 28), ('Sci-Fi', 29), ('Drama', 29), ('Comedy', 30), ('Romance', 30),
-('Action', 31), ('Thriller', 31), ('Sci-Fi', 32), ('Mystery', 32), ('Romance', 33), ('Drama', 33),
-('Adventure', 34), ('Family', 34), ('Comedy', 35), ('Fantasy', 35), ('Action', 36), ('Thriller', 36),
-('Sci-Fi', 37), ('Drama', 37), ('Comedy', 38), ('Romance', 38), ('Action', 39), ('Adventure', 39),
-('Fantasy', 40), ('Animation', 40), ('Crime', 41), ('Mystery', 41), ('Drama', 42), ('Biography', 42),
-('Horror', 43), ('Thriller', 43), ('Comedy', 44), ('Musical', 44), ('Sci-Fi', 45), ('Action', 45),
-('Adventure', 46), ('Comedy', 46), ('Drama', 47), ('Romance', 47), ('Action', 48), ('Adventure', 48),
-('Sci-Fi', 49), ('Drama', 49), ('Comedy', 50), ('Romance', 50);
+INSERT INTO `GENRES` (`Genre`, `MovieID`) VALUES 
+('Sci-Fi', 1), -- The Matrix
+('Sci-Fi', 2), -- Interstellar
+('Romance', 3), -- When Harry Met Sally
+('Horror', 4), -- The Shining
+('Fantasy', 5), -- Spirited Away
+('Musical', 6), -- The Sound of Music
+('Mystery', 7), -- The Prestige
+('War', 8), -- Schindler's List
+('War', 9), -- Saving Private Ryan
+('Western', 10), -- The Good, the Bad and the Ugly
+('Sci-Fi', 11), -- Blade Runner 2049
+('Mystery', 12), -- Gone Girl
+('Romance', 13), -- The Notebook
+('Animation', 14), -- Finding Nemo
+('Adventure', 15), -- The Princess Bride
+('Sci-Fi', 16), -- Inception
+('Sci-Fi', 17), -- The Martian
+('Romance', 18), -- La La Land
+('Action', 19), -- Pirates of the Caribbean: The Curse of the Black Pearl
+('Animation', 20), -- Toy Story
+('Thriller', 21), -- The Silence of the Lambs
+('Biography', 22), -- The Social Network
+('Horror', 23), -- Get Out
+('Animation', 24), -- The Lion King
+('Action', 25), -- The Avengers
+('Adventure', 26), -- Jurassic Park
+('Drama', 27), -- Forrest Gump
+('Action', 28), -- Mad Max: Fury Road
+('Drama', 29), -- The Shawshank Redemption
+('Comedy', 30), -- Groundhog Day
+('Action', 31), -- Die Hard
+('Mystery', 32), -- The Sixth Sense
+('Romance', 33), -- Titanic
+('Animation', 34), -- Up
+('Fantasy', 35), -- Harry Potter and the Philosopher's Stone
+('Action', 36), -- The Dark Knight
+('Sci-Fi', 37), -- Gravity
+('Romance', 38), -- Silver Linings Playbook
+('Adventure', 39), -- Indiana Jones and the Raiders of the Lost Ark
+('Animation', 40), -- Beauty and the Beast
+('Thriller', 41), -- Se7en
+('Biography', 42), -- A Beautiful Mind
+('Horror', 43), -- Psycho
+('Musical', 44), -- Singin' in the Rain
+('Sci-Fi', 45), -- The Matrix Reloaded
+('Adventure', 46), -- Back to the Future
+('Romance', 47), -- Eternal Sunshine of the Spotless Mind
+('Adventure', 48), -- Raiders of the Lost Ark
+('Sci-Fi', 49), -- The Martian
+('Comedy', 50); -- Groundhog Day
 
 -- Inserting movies
-INSERT INTO `MOVIES` (`MovieId`, `Title`,`ReleaseYear`, `CountryCreated`, `DirectorID`) VALUES
+INSERT INTO `MOVIE` (`MovieId`, `Title`,`ReleaseYear`, `CountryCreated`, `DirectorID`) VALUES
 (1, 'The Matrix', 1999, 'USA', 1), (2, 'Interstellar', 2014, 'USA', 2), (3, 'When Harry Met Sally', 1989, 'USA', 3),
 (4, 'The Shining', 1980, 'USA', 4), (5, 'Spirited Away', 2001, 'Japan', 5), (6, 'The Sound of Music', 1965, 'USA', 6),
 (7, 'The Prestige', 2006, 'USA', 7), (8, 'Schindler''s List', 1993, 'USA', 8), (9, 'Saving Private Ryan', 1998, 'USA', 9),
