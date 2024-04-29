@@ -23,7 +23,8 @@ AND m.CountryCreated = 'USA';
 /*Requirement: Self-join: 
 
 Description: Find all movies where director of movie 1 matches the director of movie 2.
-Implementation: joins MOVIES w/ MOVIES based on DirectorId*/
+Implementation: joins MOVIES w/ MOVIES based on DirectorId
+ needs php */
 SELECT DISTINCT m1.Title AS MovieTitle1, m2.Title AS MovieTitle2, d.FN, d.LN
 FROM MOVIE AS m1
 JOIN MOVIE AS m2 ON m1.DirectorID = m2.DirectorID AND m1.Title != m2.Title AND m1.Title < m2.Title
@@ -31,6 +32,7 @@ JOIN MAIN_DIRECTOR AS d ON m1.DirectorID = d.DirectorID;
 
 ********************
 
+ /*need to fix*/
 Description: Find all movies whose director acted in the movie.
 Implementation: joins MOVIES w/ MAIN_DIRECTOR and MAIN_ACTORS based on DirectorId and ActorID*/
 SELECT m.Title, d.FN AS DirectorFirstName, d.LN AS DirectorLastName, ma.FN AS ActorFirstName, ma.LN AS ActorLastName
