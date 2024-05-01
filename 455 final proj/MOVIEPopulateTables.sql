@@ -92,7 +92,7 @@ INSERT INTO `MAIN_ACTORS` (`ActorID`, `FN`,`LN`, `DOB`, `CountryOrigin`) VALUES
 (40, 'Paige', 'O''Hara', '1956-05-10', 'USA'), (41, 'Brad', 'Pitt', '1963-12-18', 'USA'), (42, 'Russell', 'Crowe', '1964-04-07', 'New Zealand'),
 (43, 'Anthony', 'Perkins', '1932-04-04', 'USA'), (44, 'Gene', 'Kelly', '1912-08-23', 'USA'), (45, 'Keanu', 'Reeves', '1964-09-02', 'USA'),
 (46, 'Michael', 'J. Fox', '1961-06-09', 'Canada'), (47, 'Jim', 'Carrey', '1962-01-17', 'Canada'), (48, 'Tye', 'Sheridan', '1996-11-11', 'USA'),
-(49, 'Matt', 'Damon', '1970-10-08', 'USA'), (50, 'Bill', 'Murray', '1950-09-21', 'USA'), (51, 'Malcolm', 'McDowell', '1943-06-13', 'UK';
+(49, 'Matt', 'Damon', '1970-10-08', 'USA'), (50, 'Bill', 'Murray', '1950-09-21', 'USA'), (51, 'Malcolm', 'McDowell', '1943-06-13', 'UK');
 -- Inserting ratings
 INSERT INTO `RATINGS` (`RatingNum`, `ReviewText`,`MovieID`, `ActorID`)  VALUES
 (3, 'Great movie!', 1, 1), (1, 'Amazing visuals!', 2, 2), (2, 'It started good but ended cheesy af.', 3, 3), 
