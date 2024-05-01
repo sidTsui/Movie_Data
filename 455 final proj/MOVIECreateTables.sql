@@ -37,8 +37,8 @@ PRIMARY KEY (`RatingNum`,`MovieID`),
 CREATE TABLE `MAIN_DIRECTOR` (
   `DirectorID` int PRIMARY KEY,
   `FN` varchar(20) NOT NULL,
-  `MN` varchar(20) NOT NULL,
-  `LN` varchar(20) NOT NULL
+  `MN` varchar(20) DEFAULT NULL,
+  `LN` varchar(20) DEFAULT NULL
 );
 /*done*/
 CREATE TABLE `PLATFORM` (
