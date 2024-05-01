@@ -48,7 +48,6 @@ INSERT INTO `GENRES` (`Genre`, `MovieID`) VALUES
 ('Adventure', 46), -- Back to the Future
 ('Romance', 47), -- Eternal Sunshine of the Spotless Mind
 ('Sci-Fi', 48), -- Ready Player One
-('Sci-Fi', 49), -- The Martian
 ('Comedy', 50); -- Groundhog Day
 ('Thriller', 51); -- A Clockwork Orange
 
