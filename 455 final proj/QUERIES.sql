@@ -30,16 +30,16 @@ FROM MOVIE AS m1
 JOIN MOVIE AS m2 ON m1.DirectorID = m2.DirectorID AND m1.Title != m2.Title AND m1.Title < m2.Title
 JOIN MAIN_DIRECTOR AS d ON m1.DirectorID = d.DirectorID;
 
-********************
+**********************
 
- /*need to fix*/
-Description: Find all movies whose director acted in the movie.
-Implementation: joins MOVIES w/ MAIN_DIRECTOR and MAIN_ACTORS based on DirectorId and ActorID*/
-SELECT m.Title, d.FN AS DirectorFirstName, d.LN AS DirectorLastName, ma.FN AS ActorFirstName, ma.LN AS ActorLastName
-FROM MOVIE AS m
-JOIN MAIN_DIRECTOR AS d ON m.DirectorID = d.DirectorID
-JOIN MAIN_ACTORS AS ma ON m.MovieID = ma.MovieID 
-AND d.ActorID = ma.ActorID;
+/* i think this is better self join than one above*/
+
+SELECT d.FN, d.LN, GROUP_CONCAT(m1.Title ORDER BY m1.Title) AS DirectedMovies
+FROM MAIN_DIRECTOR AS d
+JOIN MOVIE AS m1 ON d.DirectorID = m1.DirectorID
+JOIN MOVIE AS m2 ON d.DirectorID = m2.DirectorID AND m1.MovieID != m2.MovieID
+GROUP BY d.DirectorID
+HAVING COUNT(*) > 1;
 **********************
 
 
