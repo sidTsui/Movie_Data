@@ -54,25 +54,25 @@ INSERT INTO `GENRES` (`Genre`, `MovieID`) VALUES
 
 -- Inserting movies
 INSERT INTO `MOVIE` (`MovieId`, `Title`,`ReleaseYear`, `CountryCreated`, `DirectorID`) VALUES
-(1, 'The Matrix', 1999, 'USA', 1), (2, 'Interstellar', 2014, 'USA', 7), (3, 'When Harry Met Sally', 1989, 'USA', 3),
+(1, 'The Matrix', 1999, 'USA', 1), (2, 'Interstellar', 2014, 'USA', 2), (3, 'When Harry Met Sally', 1989, 'USA', 3),
 (4, 'The Shining', 1980, 'USA', 4), (5, 'Spirited Away', 2001, 'Japan', 5), (6, 'The Sound of Music', 1965, 'USA', 6),
-(7, 'The Prestige', 2006, 'USA', 7), (8, "Schindler's List", 1993, 'USA', 39), (9, 'Saving Private Ryan', 1998, 'USA', 39),
+(7, 'The Prestige', 2006, 'USA', 7), (8, 'Schindler''s List', 1993, 'USA', 8), (9, 'Saving Private Ryan', 1998, 'USA', 9),
 (10, 'The Good, the Bad and the Ugly', 1966, 'Italy', 10), (11, 'Blade Runner 2049', 2017, 'USA', 11),
 (12, 'Gone Girl', 2014, 'USA', 12), (13, 'The Notebook', 2004, 'USA', 13), (14, 'Finding Nemo', 2003, 'USA', 14),
-(15, 'The Princess Bride', 1987, 'USA', 3), (16, 'Inception', 2010, 'USA', 7), (17, 'The Martian', 2015, 'USA', 17),
+(15, 'The Princess Bride', 1987, 'USA', 15), (16, 'Inception', 2010, 'USA', 16), (17, 'The Martian', 2015, 'USA', 17),
 (18, 'La La Land', 2016, 'USA', 18), (19, 'Pirates of the Caribbean: The Curse of the Black Pearl', 2003, 'USA', 19),
-(20, 'Toy Story', 1995, 'USA', 20), (21, 'The Silence of the Lambs', 1991, 'USA', 21), (22, 'The Social Network', 2010, 'USA', 12),
+(20, 'Toy Story', 1995, 'USA', 20), (21, 'The Silence of the Lambs', 1991, 'USA', 21), (22, 'The Social Network', 2010, 'USA', 22),
 (23, 'Get Out', 2017, 'USA', 23), (24, 'The Lion King', 1994, 'USA', 24), (25, 'The Avengers', 2012, 'USA', 25),
-(26, 'Jurassic Park', 1993, 'USA', 39), (27, 'Forrest Gump', 1994, 'USA', 27), (28, 'Mad Max: Fury Road', 2015, 'Australia', 28),
+(26, 'Jurassic Park', 1993, 'USA', 26), (27, 'Forrest Gump', 1994, 'USA', 27), (28, 'Mad Max: Fury Road', 2015, 'Australia', 28),
 (29, 'The Shawshank Redemption', 1994, 'USA', 29), (30, 'Groundhog Day', 1993, 'USA', 30), (31, 'Die Hard', 1988, 'USA', 31),
 (32, 'The Sixth Sense', 1999, 'USA', 32), (33, 'Titanic', 1997, 'USA', 33), (34, 'Up', 2009, 'USA', 34),
-(35, "Harry Potter and the Philosopher's Stone", 2001, 'USA', 35), (36, 'The Dark Knight', 2008, 'USA', 7),
+(35, 'Harry Potter and the Philosopher''s Stone', 2001, 'USA', 35), (36, 'The Dark Knight', 2008, 'USA', 36),
 (37, 'Gravity', 2013, 'USA', 37), (38, 'Silver Linings Playbook', 2012, 'USA', 38), (39, 'Indiana Jones and the Raiders of the Lost Ark', 1981, 'USA', 39),
-(40, 'Beauty and the Beast', 1991, 'USA', 40), (41, 'Se7en', 1995, 'USA', 12), (42, 'A Beautiful Mind', 2001, 'USA', 42),
-(43, 'Psycho', 1960, 'USA', 43), (44, "Singin' in the Rain", 1952, 'USA', 44), (45, 'The Matrix Reloaded', 2003, 'USA', 1),
-(46, 'Back to the Future', 1985, 'USA', 27), (47, 'Eternal Sunshine of the Spotless Mind', 2004, 'USA', 47),
+(40, 'Beauty and the Beast', 1991, 'USA', 40), (41, 'Se7en', 1995, 'USA', 41), (42, 'A Beautiful Mind', 2001, 'USA', 42),
+(43, 'Psycho', 1960, 'USA', 43), (44, 'Singin'' in the Rain', 1952, 'USA', 44), (45, 'The Matrix Reloaded', 2003, 'USA', 1),
+(46, 'Back to the Future', 1985, 'USA', 45), (47, 'Eternal Sunshine of the Spotless Mind', 2004, 'USA', 47),
 (48, 'Ready Player One', 2018, 'USA', 39), (49, 'The Martian', 2015, 'USA', 17), (50, 'Groundhog Day', 1993, 'USA', 30),
-   (51, 'A Clockwork Orange', 1971, 'UK', 4);
+   (51, 'A CLockwork Orange', 1971, 'UK', 4);
 
 -- Inserting main actors
 INSERT INTO `MAIN_ACTORS` (`ActorID`, `FN`,`LN`, `DOB`, `CountryOrigin`) VALUES
@@ -109,27 +109,25 @@ INSERT INTO `RATINGS` (`RatingNum`, `ReviewText`,`MovieID`, `ActorID`)  VALUES
 (3, 'Mind-bending!', 36, 36), (4, 'Intense!', 37, 37), (2, 'Trash!', 38, 38), (5, 'Thrilling!', 39, 39),
 (4, 'Enchanting!', 40, 40), (5, 'Dark and gritty!', 41, 41), (5, 'Inspiring!', 42, 42), (4, 'Creepy!', 43, 43),
 (1, 'This was so overrated.', 44, 44), (5, 'Action-packed sequel!', 45, 45), (2, 'Time-traveling adventure!', 46, 46),
-(5, 'Romantic comedy!', 47, 47), (4, 'Iconic adventure!', 48, 48), (2, 'Crying,vomiting,calling my mom over this movie.', 49, 49), (1, "Can't believe I wasted my money on this.", 50, 50), 
-(4, 'Unnerving!', 51, 51;
+(5, 'Romantic comedy!', 47, 47), (4, 'Iconic adventure!', 48, 48), (2, 'Crying, vomiting, calling my mom over this movie.', 49, 49), (1, "Can't believe I wasted my money on this.", 50, 50), 
+(4, 'Unnerving!', 51, 51);
 -- Inserting main directors
 INSERT INTO `MAIN_DIRECTOR` (`DirectorID`, `FN`,`MN`, `LN`)  VALUES
-(1, 'Lana', NULL, 'Wachowski'), (2, 'Christopher', NULL, 'Nolan'), (3, 'Rob', NULL, 'Reiner'),
+(1, 'Lana', NULL, 'Wachowski'),  (3, 'Rob', NULL, 'Reiner'),
 (4, 'Stanley', NULL, 'Kubrick'), (5, 'Hayao', NULL, 'Miyazaki'), (6, 'Robert', NULL, 'Wise'),
 (7, 'Christopher', NULL, 'Nolan'), (39, 'Steven', NULL, 'Spielberg'),
 (10, 'Sergio', NULL, 'Leone'), (11, 'Denis', NULL, 'Villeneuve'), (12, 'David', NULL, 'Fincher'),
-(13, 'Nick', NULL, 'Cassavetes'), (14, 'Andrew', NULL, 'Stanton'), (15, 'Rob', NULL, 'Reiner'), 
+(13, 'Nick', NULL, 'Cassavetes'), (14, 'Andrew', NULL, 'Stanton'),
 (17, 'Ridley', NULL, 'Scott'), (18, 'Damien', NULL, 'Chazelle'),
 (19, 'Gore', NULL, 'Verbinski'), (20, 'John', NULL, 'Lasseter'), (21, 'Jonathan', NULL, 'Demme'),
-(22, 'David', NULL, 'Fincher'), (23, 'Jordan', NULL, 'Peele'), (24, 'Roger', NULL, 'Allers'),
+ (23, 'Jordan', NULL, 'Peele'), (24, 'Roger', NULL, 'Allers'),
 (25, 'Joss', NULL, 'Whedon'), (27, 'Robert', NULL, 'Zemeckis'),
 (28, 'George', NULL, 'Miller'), (29, 'Frank', NULL, 'Darabont'), (30, 'Harold', NULL, 'Ramis'),
-(31, 'John', NULL, 'McTiernan'), (32, 'M. Night', NULL, 'Shyamalan'), (33, 'James', NULL, 'Cameron'),
-(34, 'Pete', NULL, 'Docter'), (35, 'Chris', NULL, 'Columbus'), (36, 'Christopher', NULL, 'Nolan'),
-(37, 'Alfonso', NULL, 'Cuarón'), (38, 'David', NULL, 'O. Russell'), (39, 'Steven', NULL, 'Spielberg'),
-(40, 'Gary', NULL, 'Trousdale'), (41, 'David', NULL, 'Fincher'), (42, 'Ron', NULL, 'Howard'),
-(43, 'Alfred', NULL, 'Hitchcock'), (44, 'Stanley', NULL, 'Donen'), (45, 'Robert', NULL, 'Zemeckis'),
-(46, 'Robert', 'Zemeckis', NULL), (47, 'Michel', NULL, 'Gondry'),
-(49, 'Ridley', NULL, 'Scott'), (50, 'Harold', NULL, 'Ramis');
+(31, 'John', NULL, 'McTiernan'), (32, 'M.', "Night", 'Shyamalan'), (33, 'James', NULL, 'Cameron'),
+(34, 'Pete', NULL, 'Docter'), (35, 'Chris', NULL, 'Columbus'), 
+(37, 'Alfonso', NULL, 'Cuarón'), (38, 'David', NULL, 'O. Russell'),
+(40, 'Gary', NULL, 'Trousdale'), (42, 'Ron', NULL, 'Howard'),
+(43, 'Alfred', NULL, 'Hitchcock'), (44, 'Stanley', NULL, 'Donen'), (47, 'Michel', NULL, 'Gondry');
 -- Inserting platforms
 INSERT INTO `PLATFORM` (`PlatformID`, `PlatformName`,`Price`, `DateAdded`)  VALUES
 (1, 'Netflix', 9.99, '2023-01-01'), (2, 'Amazon Prime Video', 8.99, '2022-12-15'), (3, 'Hulu', 7.99, '2023-02-20');
