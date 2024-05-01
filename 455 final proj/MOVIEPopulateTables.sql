@@ -54,25 +54,25 @@ INSERT INTO `GENRES` (`Genre`, `MovieID`) VALUES
 
 -- Inserting movies
 INSERT INTO `MOVIE` (`MovieId`, `Title`,`ReleaseYear`, `CountryCreated`, `DirectorID`) VALUES
-(1, 'The Matrix', 1999, 'USA', 1), (2, 'Interstellar', 2014, 'USA', 2), (3, 'When Harry Met Sally', 1989, 'USA', 3),
+(1, 'The Matrix', 1999, 'USA', 1), (2, 'Interstellar', 2014, 'USA', 7), (3, 'When Harry Met Sally', 1989, 'USA', 3),
 (4, 'The Shining', 1980, 'USA', 4), (5, 'Spirited Away', 2001, 'Japan', 5), (6, 'The Sound of Music', 1965, 'USA', 6),
-(7, 'The Prestige', 2006, 'USA', 7), (8, 'Schindler''s List', 1993, 'USA', 8), (9, 'Saving Private Ryan', 1998, 'USA', 9),
+(7, 'The Prestige', 2006, 'USA', 7), (8, "Schindler's List", 1993, 'USA', 39), (9, 'Saving Private Ryan', 1998, 'USA', 39),
 (10, 'The Good, the Bad and the Ugly', 1966, 'Italy', 10), (11, 'Blade Runner 2049', 2017, 'USA', 11),
 (12, 'Gone Girl', 2014, 'USA', 12), (13, 'The Notebook', 2004, 'USA', 13), (14, 'Finding Nemo', 2003, 'USA', 14),
-(15, 'The Princess Bride', 1987, 'USA', 15), (16, 'Inception', 2010, 'USA', 16), (17, 'The Martian', 2015, 'USA', 17),
+(15, 'The Princess Bride', 1987, 'USA', 3), (16, 'Inception', 2010, 'USA', 7), (17, 'The Martian', 2015, 'USA', 17),
 (18, 'La La Land', 2016, 'USA', 18), (19, 'Pirates of the Caribbean: The Curse of the Black Pearl', 2003, 'USA', 19),
-(20, 'Toy Story', 1995, 'USA', 20), (21, 'The Silence of the Lambs', 1991, 'USA', 21), (22, 'The Social Network', 2010, 'USA', 22),
+(20, 'Toy Story', 1995, 'USA', 20), (21, 'The Silence of the Lambs', 1991, 'USA', 21), (22, 'The Social Network', 2010, 'USA', 12),
 (23, 'Get Out', 2017, 'USA', 23), (24, 'The Lion King', 1994, 'USA', 24), (25, 'The Avengers', 2012, 'USA', 25),
-(26, 'Jurassic Park', 1993, 'USA', 26), (27, 'Forrest Gump', 1994, 'USA', 27), (28, 'Mad Max: Fury Road', 2015, 'Australia', 28),
+(26, 'Jurassic Park', 1993, 'USA', 39), (27, 'Forrest Gump', 1994, 'USA', 27), (28, 'Mad Max: Fury Road', 2015, 'Australia', 28),
 (29, 'The Shawshank Redemption', 1994, 'USA', 29), (30, 'Groundhog Day', 1993, 'USA', 30), (31, 'Die Hard', 1988, 'USA', 31),
 (32, 'The Sixth Sense', 1999, 'USA', 32), (33, 'Titanic', 1997, 'USA', 33), (34, 'Up', 2009, 'USA', 34),
-(35, 'Harry Potter and the Philosopher''s Stone', 2001, 'USA', 35), (36, 'The Dark Knight', 2008, 'USA', 36),
+(35, "Harry Potter and the Philosopher's Stone", 2001, 'USA', 35), (36, 'The Dark Knight', 2008, 'USA', 7),
 (37, 'Gravity', 2013, 'USA', 37), (38, 'Silver Linings Playbook', 2012, 'USA', 38), (39, 'Indiana Jones and the Raiders of the Lost Ark', 1981, 'USA', 39),
-(40, 'Beauty and the Beast', 1991, 'USA', 40), (41, 'Se7en', 1995, 'USA', 41), (42, 'A Beautiful Mind', 2001, 'USA', 42),
-(43, 'Psycho', 1960, 'USA', 43), (44, 'Singin'' in the Rain', 1952, 'USA', 44), (45, 'The Matrix Reloaded', 2003, 'USA', 1),
-(46, 'Back to the Future', 1985, 'USA', 45), (47, 'Eternal Sunshine of the Spotless Mind', 2004, 'USA', 47),
+(40, 'Beauty and the Beast', 1991, 'USA', 40), (41, 'Se7en', 1995, 'USA', 12), (42, 'A Beautiful Mind', 2001, 'USA', 42),
+(43, 'Psycho', 1960, 'USA', 43), (44, "Singin' in the Rain", 1952, 'USA', 44), (45, 'The Matrix Reloaded', 2003, 'USA', 1),
+(46, 'Back to the Future', 1985, 'USA', 27), (47, 'Eternal Sunshine of the Spotless Mind', 2004, 'USA', 47),
 (48, 'Ready Player One', 2018, 'USA', 39), (49, 'The Martian', 2015, 'USA', 17), (50, 'Groundhog Day', 1993, 'USA', 30),
-   (51, 'A CLockwork Orange', 1971, 'UK', 4);
+   (51, 'A Clockwork Orange', 1971, 'UK', 4);
 
 -- Inserting main actors
 INSERT INTO `MAIN_ACTORS` (`ActorID`, `FN`,`LN`, `DOB`, `CountryOrigin`) VALUES
@@ -95,21 +95,21 @@ INSERT INTO `MAIN_ACTORS` (`ActorID`, `FN`,`LN`, `DOB`, `CountryOrigin`) VALUES
 (49, 'Matt', 'Damon', '1970-10-08', 'USA'), (50, 'Bill', 'Murray', '1950-09-21', 'USA'), (51, 'Malcolm', 'McDowell', '1943-06-13', 'UK';
 -- Inserting ratings
 INSERT INTO `RATINGS` (`RatingNum`, `ReviewText`,`MovieID`, `ActorID`)  VALUES
-(3, 'Great movie!', 1, 1), (1, 'Amazing visuals!', 2, 2), (2, 'Classic rom-com!', 3, 3), 
+(3, 'Great movie!', 1, 1), (1, 'Amazing visuals!', 2, 2), (2, 'It started good but ended cheesy af.', 3, 3), 
 (5, 'Terrifying!', 4, 4), (5, 'Incredible animation!', 5, 5), (5, 'Iconic musical!', 6, 6),
-(4, 'Mind-bending!', 7, 7), (5, 'Emotionally powerful!', 8, 8), (4, 'Intense!', 9, 9), 
+(3, 'All I can say is ... wow.', 7, 7), (5, 'Emotionally powerful!', 8, 8), (4, 'Intense!', 9, 9), 
 (5, 'Timeless classic!', 10, 10), (3, 'Stunning visuals!', 11, 11), (4, 'Twisted thriller!', 12, 12),
 (4, 'Heartfelt romance!', 13, 13), (5, 'Charming adventure!', 14, 14), (5, 'Hilarious!', 15, 15),
 (5, 'Action-packed!', 16, 16), (4, 'Epic sci-fi!', 17, 17), (5, 'Beautifully crafted!', 18, 18),
 (4, 'Swashbuckling fun!', 19, 19), (5, 'Toy-tastic!', 20, 20), (5, 'Chilling!', 21, 21),
 (5, 'Thought-provoking!', 22, 22), (4, 'Tense thriller!', 23, 23), (3, 'Disney classic!', 24, 24),
 (5, 'Superhero extravaganza!', 25, 25), (5, 'Classic adventure!', 26, 26), (4, 'Quirky comedy!', 27, 27),
-(2, 'Action-packed!', 28, 28), (4, 'Mind-bending!', 29, 29), (5, 'Hilarious!', 30, 30), (5, 'Action-packed!', 31, 31),
+(2, 'Never watching this again!', 28, 28), (4, 'Mind-bending!', 29, 29), (5, 'Hilarious!', 30, 30), (5, 'Action-packed!', 31, 31),
 (4, 'Twisty thriller!', 32, 32), (5, 'Epic romance!', 33, 33), (5, 'Magical adventure!', 34, 34), (4, 'Laugh-out-loud funny!', 35, 35),
-(3, 'Mind-bending!', 36, 36), (4, 'Intense!', 37, 37), (2, 'Heartfelt!', 38, 38), (5, 'Thrilling!', 39, 39),
+(3, 'Mind-bending!', 36, 36), (4, 'Intense!', 37, 37), (2, 'Trash!', 38, 38), (5, 'Thrilling!', 39, 39),
 (4, 'Enchanting!', 40, 40), (5, 'Dark and gritty!', 41, 41), (5, 'Inspiring!', 42, 42), (4, 'Creepy!', 43, 43),
-(5, 'Classic musical!', 44, 44), (5, 'Action-packed sequel!', 45, 45), (2, 'Time-traveling adventure!', 46, 46),
-(5, 'Romantic comedy!', 47, 47), (4, 'Iconic adventure!', 48, 48), (4, 'Thrilling sci-fi!', 49, 49), (2, 'Hilarious comedy!', 50, 50), 
+(1, 'This was so overrated.', 44, 44), (5, 'Action-packed sequel!', 45, 45), (2, 'Time-traveling adventure!', 46, 46),
+(5, 'Romantic comedy!', 47, 47), (4, 'Iconic adventure!', 48, 48), (2, 'Crying,vomiting,calling my mom over this movie.', 49, 49), (1, "Can't believe I wasted my money on this.", 50, 50), 
 (4, 'Unnerving!', 51, 51;
 -- Inserting main directors
 INSERT INTO `MAIN_DIRECTOR` (`DirectorID`, `FN`,`MN`, `LN`)  VALUES
