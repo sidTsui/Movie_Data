@@ -54,25 +54,24 @@ INSERT INTO `GENRES` (`Genre`, `MovieID`) VALUES
 
 -- Inserting movies
 INSERT INTO `MOVIE` (`MovieId`, `Title`,`ReleaseYear`, `CountryCreated`, `DirectorID`) VALUES
-(1, 'The Matrix', 1999, 'USA', 1), (2, 'Interstellar', 2014, 'USA', 2), (3, 'When Harry Met Sally', 1989, 'USA', 3),
+(1, 'The Matrix', 1999, 'USA', 1), (2, 'Interstellar', 2014, 'USA', 7), (3, 'When Harry Met Sally', 1989, 'USA', 3),
 (4, 'The Shining', 1980, 'USA', 4), (5, 'Spirited Away', 2001, 'Japan', 5), (6, 'The Sound of Music', 1965, 'USA', 6),
-(7, 'The Prestige', 2006, 'USA', 7), (8, 'Schindler''s List', 1993, 'USA', 8), (9, 'Saving Private Ryan', 1998, 'USA', 9),
+(7, 'The Prestige', 2006, 'USA', 7), (8, "Schindler's List", 1993, 'USA', 39), (9, 'Saving Private Ryan', 1998, 'USA', 39),
 (10, 'The Good, the Bad and the Ugly', 1966, 'Italy', 10), (11, 'Blade Runner 2049', 2017, 'USA', 11),
 (12, 'Gone Girl', 2014, 'USA', 12), (13, 'The Notebook', 2004, 'USA', 13), (14, 'Finding Nemo', 2003, 'USA', 14),
-(15, 'The Princess Bride', 1987, 'USA', 15), (16, 'Inception', 2010, 'USA', 16), (17, 'The Martian', 2015, 'USA', 17),
+(15, 'The Princess Bride', 1987, 'USA', 3), (16, 'Inception', 2010, 'USA', 7), (17, 'The Martian', 2015, 'USA', 17),
 (18, 'La La Land', 2016, 'USA', 18), (19, 'Pirates of the Caribbean: The Curse of the Black Pearl', 2003, 'USA', 19),
-(20, 'Toy Story', 1995, 'USA', 20), (21, 'The Silence of the Lambs', 1991, 'USA', 21), (22, 'The Social Network', 2010, 'USA', 22),
+(20, 'Toy Story', 1995, 'USA', 20), (21, 'The Silence of the Lambs', 1991, 'USA', 21), (22, 'The Social Network', 2010, 'USA', 12),
 (23, 'Get Out', 2017, 'USA', 23), (24, 'The Lion King', 1994, 'USA', 24), (25, 'The Avengers', 2012, 'USA', 25),
-(26, 'Jurassic Park', 1993, 'USA', 26), (27, 'Forrest Gump', 1994, 'USA', 27), (28, 'Mad Max: Fury Road', 2015, 'Australia', 28),
+(26, 'Jurassic Park', 1993, 'USA', 39), (27, 'Forrest Gump', 1994, 'USA', 27), (28, 'Mad Max: Fury Road', 2015, 'Australia', 28),
 (29, 'The Shawshank Redemption', 1994, 'USA', 29), (30, 'Groundhog Day', 1993, 'USA', 30), (31, 'Die Hard', 1988, 'USA', 31),
 (32, 'The Sixth Sense', 1999, 'USA', 32), (33, 'Titanic', 1997, 'USA', 33), (34, 'Up', 2009, 'USA', 34),
-(35, 'Harry Potter and the Philosopher''s Stone', 2001, 'USA', 35), (36, 'The Dark Knight', 2008, 'USA', 36),
+(35, 'Harry Potter and the Philosopher''s Stone', 2001, 'USA', 35), (36, 'The Dark Knight', 2008, 'USA', 7),
 (37, 'Gravity', 2013, 'USA', 37), (38, 'Silver Linings Playbook', 2012, 'USA', 38), (39, 'Indiana Jones and the Raiders of the Lost Ark', 1981, 'USA', 39),
-(40, 'Beauty and the Beast', 1991, 'USA', 40), (41, 'Se7en', 1995, 'USA', 41), (42, 'A Beautiful Mind', 2001, 'USA', 42),
-(43, 'Psycho', 1960, 'USA', 43), (44, 'Singin'' in the Rain', 1952, 'USA', 44), (45, 'The Matrix Reloaded', 2003, 'USA', 1),
-(46, 'Back to the Future', 1985, 'USA', 45), (47, 'Eternal Sunshine of the Spotless Mind', 2004, 'USA', 47),
-(48, 'Ready Player One', 2018, 'USA', 39), (49, 'The Martian', 2015, 'USA', 17), (50, 'Groundhog Day', 1993, 'USA', 30),
-   (51, 'A CLockwork Orange', 1971, 'UK', 4);
+(40, 'Beauty and the Beast', 1991, 'USA', 40), (41, 'Se7en', 1995, 'USA', 12), (42, 'A Beautiful Mind', 2001, 'USA', 42),
+(43, 'Psycho', 1960, 'USA', 43), (44, "Singin' in the Rain", 1952, 'USA', 44), (45, 'The Matrix Reloaded', 2003, 'USA', 1),
+(46, 'Back to the Future', 1985, 'USA', 27), (47, 'Eternal Sunshine of the Spotless Mind', 2004, 'USA', 47),
+(48, 'Ready Player One', 2018, 'USA', 39), (50, 'Groundhog Day', 1993, 'USA', 30), (51, 'A CLockwork Orange', 1971, 'UK', 4);
 
 -- Inserting main actors
 INSERT INTO `MAIN_ACTORS` (`ActorID`, `FN`,`LN`, `DOB`, `CountryOrigin`) VALUES
