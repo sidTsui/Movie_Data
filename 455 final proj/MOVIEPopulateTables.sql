@@ -70,7 +70,7 @@ INSERT INTO `MOVIE` (`MovieId`, `Title`,`ReleaseYear`, `CountryCreated`, `Direct
 (40, 'Beauty and the Beast', 1991, 'USA', 40), (41, 'Se7en', 1995, 'USA', 41), (42, 'A Beautiful Mind', 2001, 'USA', 42),
 (43, 'Psycho', 1960, 'USA', 43), (44, 'Singin'' in the Rain', 1952, 'USA', 44), (45, 'The Matrix Reloaded', 2003, 'USA', 1),
 (46, 'Back to the Future', 1985, 'USA', 45), (47, 'Eternal Sunshine of the Spotless Mind', 2004, 'USA', 47),
-(48, 'Raiders of the Lost Ark', 1981, 'USA', 39), (49, 'The Martian', 2015, 'USA', 17), (50, 'Groundhog Day', 1993, 'USA', 30), (51, 'Jaws', 1975, 'USA' 39),
+(48, 'Raiders of the Lost Ark', 1981, 'USA', 39), (49, 'The Martian', 2015, 'USA', 17), (50, 'Groundhog Day', 1993, 'USA', 30), (51, 'Jaws', 1975, 'USA', 39),
   (52, 'Ready Player One', 2018, 'USA', 39), (53, 'A CLockwork Orange', 1971, 'Britain', 4);
 
 -- Inserting main actors
