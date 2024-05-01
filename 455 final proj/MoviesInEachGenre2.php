@@ -1,7 +1,7 @@
 <?php
     try {
         require('../pdo_connect.php'); //Connect to the database
-        $sql = "SELECT g.Genre AS Genre, COUNT(*) AS NumberOfMovies FROM GENRE AS g JOIN MOVIE_GENRE AS mg ON g.GenreID = mg.GenreID GROUP BY g.Genre";
+        $sql = "SELECT g.Genre AS Genre, COUNT(*) AS NumberOfMovies FROM GENREs AS g JOIN MOVIE AS mg ON g.MovieID = mg.MovieID GROUP BY g.Genre";
         $result = $dbc->query($sql);    
     } catch (PDOException $e){
             echo $e->getMessage();
