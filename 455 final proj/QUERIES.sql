@@ -94,3 +94,5 @@ BEGIN
     SELECT AVG(RatingNum) INTO avg_rating FROM RATINGS WHERE MovieID = NEW.MovieID;
     UPDATE MOVIES SET AverageRating = avg_rating WHERE MovieID = NEW.MovieID;
 END;
+-- Says how many movies are in each genre
+SELECT g.Genre, COUNT(*) AS "Number Of Movies" FROM GENRES as g JOIN MOVIE AS mg ON g.MovieID = mg.MovieID GROUP BY g.Genre;
