@@ -108,7 +108,7 @@ INSERT INTO `RATINGS` (`RatingNum`, `ReviewText`,`MovieID`, `ActorID`)  VALUES
 (3, 'Mind-bending!', 36, 36), (4, 'Intense!', 37, 37), (2, 'Trash!', 38, 38), (5, 'Thrilling!', 39, 39),
 (4, 'Enchanting!', 40, 40), (5, 'Dark and gritty!', 41, 41), (5, 'Inspiring!', 42, 42), (4, 'Creepy!', 43, 43),
 (1, 'This was so overrated.', 44, 44), (5, 'Action-packed sequel!', 45, 45), (2, 'Time-traveling adventure!', 46, 46),
-(5, 'Romantic comedy!', 47, 47), (4, 'Iconic adventure!', 48, 48), (2, 'Crying, vomiting, calling my mom over this movie.', 49, 49), (1, "Can't believe I wasted my money on this.", 50, 50), 
+(5, 'Romantic comedy!', 47, 47), (4, 'Iconic adventure!', 48, 48), (2, 'Crying, vomiting, calling my mom over this movie.', 50, 50), (1, "Can't believe I wasted my money on this.", 50, 50), 
 (4, 'Unnerving!', 51, 51);
 -- Inserting main directors
 INSERT INTO `MAIN_DIRECTOR` (`DirectorID`, `FN`,`MN`, `LN`)  VALUES
